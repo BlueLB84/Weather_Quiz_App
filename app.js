@@ -1,5 +1,66 @@
 const STATE = {
-    questions: [],
+    questions: [
+        {
+        question: 'What type of cloud signifies a thunderstorm?',
+        answers: ['nimbostratus','alto cumulus','cumulonimbus','cirrus'],
+        correctIndex: 2,
+        img: 'http://static.wixstatic.com/media/6bc624_aae337b704db450794c1f4c4e35e2285~mv2.jpg'
+        },
+        {
+        question: 'What is the name of a scientist who studies weather?',
+        answers: ['cloudologist','weatherologist','stormologist','meteorologist'],
+        correctIndex: 3,
+        img: 'http://www.adweek.com/tvspy/wp-content/uploads/sites/4/2016/12/578982397_1280x720-862x485.jpg'
+        },
+        {
+        question: 'What does an anemometer measure?',
+        answers: ['precipitation','wind','air pressure','temperature'],
+        correctIndex: 1,
+        img: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Wea00920.jpg'
+        },
+        {
+        question: 'What do you call the well-known radar signature for tornadic supercells?',
+        answers: ['hook echo','bow echo','tornado echo','storm echo'],
+        correctIndex: 0,
+        img: 'http://3.bp.blogspot.com/-t13hMqAP0XU/TbpWV697WPI/AAAAAAAABrg/Ul0vY81X2Zw/s1600/720AL.png'
+        },
+        {
+        question: 'What measurement is defined as the amount of water vapor present in air expressed as a percentage of the amount needed for saturation at the same temperature?',
+        answers: ['temperature','relative humidity','dew point depression','station pressure'],
+        correctIndex: 1,
+        img: 'https://aos.iacpublishinglabs.com/question/aq/1400px-788px/happens-water-vapor-cools_b93d1ab57cba68ad.jpg?domain=cx.aos.ask.com'
+        },
+        {
+        question: 'What do you call a large tropical storm system with high-powered circular winds?',
+        answers: ['tornado','cold front','tempest','hurricane'],
+        correctIndex: 3,
+        img: 'https://bloximages.newyork1.vip.townnews.com/theadvocate.com/content/tncms/assets/v3/editorial/9/67/96768492-2da4-5ac6-b50c-3996195717e6/57742e8d07e21.image.jpg'
+        },
+        {
+        question: 'What is the colloquial term for the area of the United States where tornadoes are most frequent?',
+        answers: ['tornado gutter','tornado alley','tornado street','tornado highway'],
+        correctIndex: 1,
+        img: 'http://modernsurvivalblog.com/wp-content/uploads/2017/05/tornado-map-usa.jpg'
+        },
+        {
+        question: 'What term is defined as a rising of the sea as a result of atmospheric pressure changes and wind associated with a storm?',
+        answers: ['storm attack','storm flood','storm surge','storm wave'],
+        correctIndex: 2,
+        img: 'https://news.agu.org/files/2015/02/1938-Woods-Hole.jpg'
+        },
+        {
+        question: 'What is the common term for a sky with rows of cirrocumulus or altocumulus clouds displaying an undulating, rippling pattern similar in appearance to fish scales?',
+        answers: ['fisherman\'s sky','bubblegum sky','mackerel sky','popcorn sky'],
+        correctIndex: 2,
+        img: 'http://photos.capturewisconsin.com/photos/M-y4htsYyuo-LZPbxOjN8Q/showcase.jpg'
+        },
+        {
+        question: 'What do you call a sudden electrostatic discharge that occurs during a thunderstorm?',
+        answers: ['thunder','static boom','flashbang','lightning'],
+        correctIndex: 3,
+        img: 'http://cdn.inquisitr.com/wp-content/uploads/2016/05/lightning-storm-deaths.jpg'
+        },
+    ],
     currentQuestion: 0,
     userScore: 0,
     lastQuestionCorrect: null,
