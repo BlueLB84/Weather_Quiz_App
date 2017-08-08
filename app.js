@@ -61,11 +61,21 @@ const STATE = {
         img: 'http://cdn.inquisitr.com/wp-content/uploads/2016/05/lightning-storm-deaths.jpg'
         },
     ],
+    questionOrder: randomArrayGenerator(),
     currentQuestion: 0,
     userScore: 0,
     lastQuestionCorrect: null,
     route: 'start'
 };
+
+function randomArrayGenerator(){
+    let tempArray = [];
+    for (let a = [0, 1, 2, 3, 4], i = a.length; i--;) {
+        let random = a.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
+        tempArray.push(random);
+    }
+    return tempArray;
+}
 
 const PAGE_VIEWS = {
     'start': $('.js-start-page'),
@@ -99,8 +109,16 @@ function renderQuiz(state, elements) {
     }
 }
 
+// js-start-button quiz start listener
+$('.js-start-button').on('click', event => {
+    event.preventDefault();
+    console.log('quiz start button clicked');
+    STATE.route = 'questions';
+    renderQuiz(STATE, PAGE_VIEWS);
+});
+
 function renderQuestionPage (state, element) {
-    // renders question page
+    
 }
 
 function renderAnswerFeedbackPage (state, element) {
