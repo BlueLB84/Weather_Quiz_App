@@ -16,15 +16,22 @@
     </section>     
     
     <section class="js-question-page">
-        <h2>Question <span class="js-current-question-index"></span></h2>    
+        <h2>Question <span class="js-current-question-index"></span> of 10</h2>    
         <form id="js-current-question-form">
+            <p class="js-current-question">
+            <input type="radio" name="answer-choice" id="ans-choice-1" value="0"><label for="ans-choice-1"></label>
+            <input type="radio" name="answer-choice" id="ans-choice-2" value="1"><label for="ans-choice-2"></label>
+            <input type="radio" name="answer-choice" id="ans-choice-3" value="2"><label for="ans-choice-3"></label>
+            <input type="radio" name="answer-choice" id="ans-choice-4" value="3"><label for="ans-choice-4"></label>
             <button type="submit" class="js-answer-submit">Submit</button>
         </form>
     </section>
 
     <section class="js-feedback-page">
-        <h2 class="js-answer-feedback"></h1>
+        <h2 class="js-answer-feedback"></h2>
             <img src="" alt="" class="answer-feedback-image">
+            <h3 class="js-current-question-restated"></h3>
+            <p class="js-current-correct-answer"></p>
             <p>Score: <span class="js-current-score"></span> / 10</p>
         <button type="submit" class="js-next-submit">Next</button>
     </section>
