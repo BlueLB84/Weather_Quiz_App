@@ -18,12 +18,9 @@
     
     <section class="js-question-page">
         <h2>Question <span class="js-current-question-index"></span> of 10</h2>    
-        <form id="js-current-question-form">
-            <p class="js-current-question">
-            <input type="radio" name="answer-choice" id="ans-choice-1" value="0"><label for="ans-choice-1"></label>
-            <input type="radio" name="answer-choice" id="ans-choice-2" value="1"><label for="ans-choice-2"></label>
-            <input type="radio" name="answer-choice" id="ans-choice-3" value="2"><label for="ans-choice-3"></label>
-            <input type="radio" name="answer-choice" id="ans-choice-4" value="3"><label for="ans-choice-4"></label>
+        <form name="current-question-form">
+            <p class="js-current-question"></p>
+            <fieldset name="answer-choices" class="js-answer-choices"></fieldset>
             <button type="submit" class="js-answer-submit">Submit</button>
         </form>
     </section>
