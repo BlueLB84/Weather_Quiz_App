@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Quiz App</title>
+</head>
+<body>
+    <main>
+        <h1 class="quiz_title">WxQz</h1>
+    </main>
+    <section  class="js-start-page">
+        <p>Test your weather knowledge with Weather Quiz!</p>
+        <button type="submit">Start WxQz</button>
+    </section>     
+    
+    <section class="js-question-page">
+        <h2>Question <span class="js-current-question-index"></span></h2>    
+        <form id="js-current-question-form">
+            <button type="submit" class="js-answer-submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="js-feedback-page">
+        <h2 class="js-answer-feedback"></h1>
+            <img src="" alt="" class="answer-feedback-image">
+            <p>Score: <span class="js-current-score"></span> / 10</p>
+        <button type="submit" class="js-next-submit">Next</button>
+    </section>
+
+    <section class="js-results-page">
+        <h2>Final Score</h2>
+        <img src="images/weather_img.jpg" alt="supercell thunderstorm" id="results_page_img">
+        <p class="final-score"><span class="js-final-score"></span> / 10</p>
+        <button type="submit" class="js-restart-quiz-submit">Restart WxQz</button>
+    </section>
+</body>
+</html>
