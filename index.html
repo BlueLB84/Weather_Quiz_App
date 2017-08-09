@@ -10,7 +10,7 @@
 <body>
     <main>
         <h1 class="quiz_title">WxQz</h1>
-    </main>
+    
     <section  class="js-start-page">
         <p>Test your weather knowledge with Weather Quiz!</p>
         <button type="submit" class="js-start-button">Start WxQz</button>
@@ -18,7 +18,7 @@
     
     <section class="js-question-page">
         <h2>Question <span class="js-current-question-index"></span> of 10</h2>    
-        <form name="current-question-form">
+        <form name="current-question-form" id="current-question">
             <p class="js-current-question"></p>
             <fieldset name="answer-choices" class="js-answer-choices"></fieldset>
             <button type="submit" class="js-answer-submit">Submit</button>
@@ -30,7 +30,7 @@
             <img src="" alt="" class="answer-feedback-image">
             <h3 class="js-current-question-restated"></h3>
             <p class="js-current-correct-answer"></p>
-            <p>Score: <span class="js-current-score"></span> / 10</p>
+            <p>Current Score: <span class="js-current-score"></span> / 10</p>
         <button type="submit" class="js-next-submit">Next</button>
     </section>
 
@@ -42,7 +42,7 @@
         </div>
         <button type="submit" class="js-restart-quiz-submit">Restart WxQz</button>
     </section>
-
+</main>
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript" src="app.js"></script>
 </body>
