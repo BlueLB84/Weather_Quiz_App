@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.js-start-page, .js-question-page, .js-feedback-page, .js-results-page {
+    text-align: center;
+}
+
+fieldset {
+    text-align: left;
+    width: 60%;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.js-current-question {
+    width: 75%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.answer_input {
+    margin: 10px 5px 10px 10px;
+}
+
+#smiley_goofy, #smiley_glasses {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.answer-feedback-image {
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+[alt~="anemometer"] {
+    height: 500px;
+}
