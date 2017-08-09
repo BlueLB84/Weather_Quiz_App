@@ -195,6 +195,14 @@ function handleRestartQuiz() {
     document.getElementById('current-question').reset();
 }
 
+$('.js-restart-quiz-submit').click(function(event) {
+    console.log('js restart clicked');
+    event.preventDefault();
+    handleRestartQuiz();
+    STATE.route = 'start';
+    renderQuiz(STATE, PAGE_VIEWS);
+});
+
 $(document).ready(function() {
     renderQuiz(STATE, PAGE_VIEWS);
 });
