@@ -95,7 +95,6 @@ const PAGE_VIEWS = {
 };
 
 function renderQuiz(state, elements) {
-    // default to hiding all routes, then show the current route
     Object.keys(elements).forEach(function(route) {
         elements[route].hide();
     });
@@ -106,23 +105,19 @@ function renderQuiz(state, elements) {
             document.getElementById('start-button').focus();
             break;
         case 'questions':
-            console.log('question page rendered');
             renderQuestionPage(state, elements[state.route]);
             break;
         case 'answer-feedback':
-            console.log('feedback page rendered');
             renderAnswerFeedbackPage(state, elements[state.route]);
             break;
         case 'final-feedback':
-            console.log('final page rendered');
             renderFinalFeedbackPage(state, elements[state.route]);
     }
 }
 
-// js-start-button quiz start listener
+
 $('.js-start-button').on('click', event => {
     event.preventDefault();
-    console.log('quiz start button clicked');
     STATE.route = 'questions';
     renderQuiz(STATE, PAGE_VIEWS);
 });
@@ -146,13 +141,11 @@ function renderQuestionPage (state, element) {
 
 $('.js-answer-submit').click(function(event) {
     event.preventDefault();
-    console.log('js-answer-submit clicked');
     let currentQuestion = STATE.questions[STATE.questionOrder[STATE.currentQuestion]];
     let answer = $('input[name=\'weather-answer\']:checked').val();
     answer = parseInt(answer, 10);
     STATE.lastQuestionCorrect = (answer === STATE.questions[STATE.questionOrder[STATE.currentQuestion]].correctIndex);
     STATE.route = 'answer-feedback';
-    // $('main').css('background-image', 'none');
     renderQuiz(STATE, PAGE_VIEWS);
 });
 
@@ -179,7 +172,6 @@ function renderAnswerFeedbackPage (state, element) {
 }
 
 $('.js-next-submit').click(function(event) {
-    // $('main').css('background-image', 'url("images/earth_weather_img.gif")');
     if (STATE.currentQuestion <= 9) {
         STATE.route = 'questions';
     } else {
@@ -201,7 +193,6 @@ function handleRestartQuiz() {
 }
 
 $('.js-restart-quiz-submit').click(function(event) {
-    console.log('js restart clicked');
     event.preventDefault();
     handleRestartQuiz();
     STATE.route = 'start';
