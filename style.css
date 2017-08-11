@@ -2,18 +2,83 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 main {
-    width: 100%;
+    width: 75%;
+    min-width: 600px;
+    max-width: 1000px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+    background-image: url('images/earth_weather_img.gif');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h1 {
     text-align: center;
+    color: #00bfff;
+    font-size: 4em;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-top: 40px;
 }
 
-.js-start-page, .js-question-page, .js-feedback-page, .js-results-page {
+.start-page, .question-page, .feedback-page, .results-page {
     text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.start-page p {
+    margin: 75px auto 30px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 500px;
+    background-color: rgba(21,16,13,0.85);
+    color: #ffffff;
+    font-size: 1.25em;
+    border-radius: 4px;
+}
+
+#start-button {
+    font-size: 1.25em;
+    color: rgb(21,16,13);
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: #00bfff;
+}
+
+.question-page, .feedback-page {
+    background-color: rgba(21,16,13,0.85);
+    color: white;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -30px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.question-page p {
+    width: 100%;
+}
+
+.answer-submit, .next-submit, .restart-quiz-submit {
+    font-size: 1em;
+    width: 100px;
+    margin-top: 15px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: #00bfff;
+    color: rgb(21,16,13);
 }
 
 fieldset {
@@ -25,27 +90,60 @@ fieldset {
     padding: 10px;
 }
 
-.js-current-question {
+.current-question-text {
     width: 75%;
     max-width: 600px;
     margin: 20px auto;
 }
 
-.answer_input {
+.answer-input {
     margin: 10px 5px 10px 10px;
 }
 
-#smiley_goofy, #smiley_glasses {
-    width: 40px;
-    margin-right: 10px;
-}
-
-.answer-feedback-image {
-    width: 500px;
+.answer-feedback-image, #results-page-img {
     display: block;
     margin: 20px auto;
 }
 
+
+
+.current-score, .final-quiz-score {
+    color: white;
+    font-size: 1.5em;
+}
+
+.results-page {
+     /* background-image: url('images/weather_img.jpg'); 
+    background-size: 100%;
+    background-repeat: no-repeat; */
+    background-color: rgba(21,16,13,0.8);
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 30px;
+    width: 400px;
+    height: 300px;
+}
+
+.final-score-h2 {
+    margin-top: 45px;
+}
+
+.final-score-h2, .final-quiz-score {
+    color: white;
+    font-size: 2em;
+}
+
 [alt~="anemometer"] {
-    height: 500px;
+    height: 100%;
+}
+
+.results-page {
+    margin-top: -20px;
+}
+
+.restart-quiz-submit {
+    margin-top: 25px;
+    width: 150px;
+    font-size: 1.15em;
 }

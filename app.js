@@ -4,70 +4,70 @@ const STATE = {
         question: 'What type of cloud signifies a thunderstorm?',
         answers: ['nimbostratus','alto cumulus','cumulonimbus','cirrus'],
         correctIndex: 2,
-        img: 'http://static.wixstatic.com/media/6bc624_aae337b704db450794c1f4c4e35e2285~mv2.jpg',
+        img: 'images/cumulonimbus_img.jpg',
         alt: 'cumulonimbus cloud'
         },
         {
         question: 'What is the name of a scientist who studies weather?',
         answers: ['cloudologist','weatherologist','stormologist','meteorologist'],
         correctIndex: 3,
-        img: 'http://www.adweek.com/tvspy/wp-content/uploads/sites/4/2016/12/578982397_1280x720-862x485.jpg',
+        img: 'images/meteorologist_img.jpg',
         alt: 'news meteorologist'
         },
         {
         question: 'What does an anemometer measure?',
         answers: ['precipitation','wind','air pressure','temperature'],
         correctIndex: 1,
-        img: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Wea00920.jpg',
+        img: 'images/anemometer_img.jpg',
         alt: 'anemometer'
         },
         {
         question: 'What do you call the well-known radar signature for tornadic supercells?',
         answers: ['hook echo','bow echo','tornado echo','storm echo'],
         correctIndex: 0,
-        img: 'http://3.bp.blogspot.com/-t13hMqAP0XU/TbpWV697WPI/AAAAAAAABrg/Ul0vY81X2Zw/s1600/720AL.png',
+        img: 'images/radar_img.png',
         alt: 'weather radar hook echo'
         },
         {
         question: 'What measurement is defined as the amount of water vapor present in air expressed as a percentage of the amount needed for saturation at the same temperature?',
         answers: ['temperature','relative humidity','dew point depression','station pressure'],
         correctIndex: 1,
-        img: 'https://aos.iacpublishinglabs.com/question/aq/1400px-788px/happens-water-vapor-cools_b93d1ab57cba68ad.jpg?domain=cx.aos.ask.com',
+        img: 'images/watervapor_img.jpg',
         alt: 'condensation on glass'
         },
         {
         question: 'What do you call a large tropical storm system with high-powered circular winds?',
         answers: ['tornado','cold front','tempest','hurricane'],
         correctIndex: 3,
-        img: 'https://bloximages.newyork1.vip.townnews.com/theadvocate.com/content/tncms/assets/v3/editorial/9/67/96768492-2da4-5ac6-b50c-3996195717e6/57742e8d07e21.image.jpg',
+        img: 'images/hurricane_img.jpg',
         alt: 'hurricane in Gulf of Mexico'
         },
         {
         question: 'What is the colloquial term for the area of the United States where tornadoes are most frequent?',
         answers: ['tornado gutter','tornado alley','tornado street','tornado highway'],
         correctIndex: 1,
-        img: 'http://modernsurvivalblog.com/wp-content/uploads/2017/05/tornado-map-usa.jpg',
+        img: 'images/tornado_map_img.jpg',
         alt: 'density map of tornados in United States'
         },
         {
         question: 'What term is defined as a rising of the sea as a result of atmospheric pressure changes and wind associated with a storm?',
         answers: ['storm attack','storm flood','storm surge','storm wave'],
         correctIndex: 2,
-        img: 'https://news.agu.org/files/2015/02/1938-Woods-Hole.jpg',
+        img: 'images/stormsurge_img.jpg',
         alt: 'storm surge along coastal town'
         },
         {
         question: 'What is the common term for a sky with rows of cirrocumulus or altocumulus clouds displaying an undulating, rippling pattern similar in appearance to fish scales?',
         answers: ['fisherman\'s sky','bubblegum sky','mackerel sky','popcorn sky'],
         correctIndex: 2,
-        img: 'http://photos.capturewisconsin.com/photos/M-y4htsYyuo-LZPbxOjN8Q/showcase.jpg',
+        img: 'images/sunset_img.jpg',
         alt: 'mackerel sky at sunset'
         },
         {
         question: 'What do you call a sudden electrostatic discharge that occurs during a thunderstorm?',
         answers: ['thunder','static boom','flashbang','lightning'],
         correctIndex: 3,
-        img: 'http://cdn.inquisitr.com/wp-content/uploads/2016/05/lightning-storm-deaths.jpg',
+        img: 'images/lightning_img.jpg',
         alt: 'lightning at night over city'
         },
     ],
@@ -103,7 +103,7 @@ function renderQuiz(state, elements) {
 
     switch (state.route) {
         case 'start':
-            console.log('start page rendered');
+            document.getElementById('start-button').focus();
             break;
         case 'questions':
             console.log('question page rendered');
@@ -132,7 +132,7 @@ function renderQuestionPage (state, element) {
     let choices = currentQuestion.answers.map(function(answer, index) {
         return (
             `
-            <input type="radio" name="weather-answer" value="${index}" id="choice-${index} required/><label for="choice-${index}" class="answer_input"> ${answer}</label>
+            <input type="radio" name="weather-answer" value="${index}" id="choice-${index}" required/><label for="choice-${index}" class="answer-input"> ${answer}</label>
             <br>
             `
         );
@@ -140,6 +140,8 @@ function renderQuestionPage (state, element) {
     $('.js-current-question-index').text(`${state.currentQuestion + 1}`);
     $('.js-current-question').text(`${currentQuestion.question}`);
     $('.js-answer-choices').html(choices);
+    $('.js-answer-choices input:first-child').attr('checked', true);
+    document.getElementById("choice-0").focus();
 }
 
 $('.js-answer-submit').click(function(event) {
@@ -150,6 +152,7 @@ $('.js-answer-submit').click(function(event) {
     answer = parseInt(answer, 10);
     STATE.lastQuestionCorrect = (answer === STATE.questions[STATE.questionOrder[STATE.currentQuestion]].correctIndex);
     STATE.route = 'answer-feedback';
+    // $('main').css('background-image', 'none');
     renderQuiz(STATE, PAGE_VIEWS);
 });
 
@@ -160,11 +163,11 @@ function updateImgAttributes (src, alt) {
 function renderAnswerFeedbackPage (state, element) {
     let currentQuestion = state.questions[state.questionOrder[state.currentQuestion]];
     if (state.lastQuestionCorrect) {
-        let correct = `<img src="images/smiley_glasses_img.jpg" alt="smiley face with glasses" id="smiley_glasses"> Correct!  The answer is ${currentQuestion.answers[currentQuestion.correctIndex]}!`;
+        let correct = `Correct!<br>The answer is ${currentQuestion.answers[currentQuestion.correctIndex]}!`;
         $('.js-answer-feedback').html(correct);
         state.userScore++;
     } else {
-        let incorrect = `<img src="images/smiley_goofy_img.jpg" alt="goofy smiley face" id="smiley_goofy"> Incorrect.  The correct answer is ${currentQuestion.answers[currentQuestion.correctIndex]}!`;
+        let incorrect = `Incorrect<br>The correct answer is ${currentQuestion.answers[currentQuestion.correctIndex]}!`;
         $('.js-answer-feedback').html(incorrect);
     }
     $('.js-current-score').text(`${state.userScore}`);
@@ -172,9 +175,11 @@ function renderAnswerFeedbackPage (state, element) {
     const SRC = currentQuestion.img;
     const ALT = currentQuestion.alt;
     updateImgAttributes(SRC, ALT);
+    document.getElementById('next-button').focus();
 }
 
 $('.js-next-submit').click(function(event) {
+    // $('main').css('background-image', 'url("images/earth_weather_img.gif")');
     if (STATE.currentQuestion <= 9) {
         STATE.route = 'questions';
     } else {

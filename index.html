@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Weather Quiz App</title>
 </head>
@@ -11,36 +12,36 @@
     <main>
         <h1 class="quiz_title">WxQz</h1>
     
-    <section  class="js-start-page">
+    <section  class="js-start-page start-page">
         <p>Test your weather knowledge with Weather Quiz!</p>
-        <button type="submit" class="js-start-button">Start WxQz</button>
+        <button type="submit" id="start-button" class="js-start-button">Start WxQz</button>
     </section>     
     
-    <section class="js-question-page">
+    <section class="js-question-page question-page">
         <h2>Question <span class="js-current-question-index"></span> of 10</h2>    
         <form name="current-question-form" id="current-question">
-            <p class="js-current-question"></p>
+            <p class="js-current-question current-question-text"></p>
             <fieldset name="answer-choices" class="js-answer-choices"></fieldset>
-            <button type="submit" class="js-answer-submit">Submit</button>
+            <button type="submit" class="js-answer-submit answer-submit">Submit</button>
         </form>
     </section>
 
-    <section class="js-feedback-page">
+    <section class="js-feedback-page feedback-page">
         <h2 class="js-answer-feedback"></h2>
             <img src="" alt="" class="answer-feedback-image">
             <h3 class="js-current-question-restated"></h3>
             <p class="js-current-correct-answer"></p>
-            <p>Current Score: <span class="js-current-score"></span> / 10</p>
-        <button type="submit" class="js-next-submit">Next</button>
+            <p class="current-score">Current Score: <span class="js-current-score"></span> / 10</p>
+        <button type="submit" id="next-button" class="js-next-submit next-submit">Next</button>
     </section>
 
-    <section class="js-results-page">
-        <h2>Final Score</h2>
+    <section class="js-results-page results-page">
+        <h2 class="final-score-h2">Final Score</h2>
         <div class="final-score">
-            <img src="images/weather_img.jpg" alt="supercell thunderstorm" id="results_page_img">
-            <p><span class="js-final-score"></span> / 10</p>
+            <!-- <img src="images/weather_img.jpg" alt="supercell thunderstorm" id="results-page-img"> -->
+            <p class="final-quiz-score"><span class="js-final-score"></span> / 10</p>
         </div>
-        <button type="submit" class="js-restart-quiz-submit">Restart WxQz</button>
+        <button type="submit" class="js-restart-quiz-submit restart-quiz-submit">Restart WxQz</button>
     </section>
 </main>
 <script src="//code.jquery.com/jquery.min.js"></script>
