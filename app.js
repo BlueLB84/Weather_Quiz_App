@@ -102,7 +102,6 @@ function renderQuiz(state, elements) {
 
     switch (state.route) {
         case 'start':
-            document.getElementById('start-button').focus();
             break;
         case 'questions':
             renderQuestionPage(state, elements[state.route]);

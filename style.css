@@ -1,30 +1,28 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
+    
 }
 
-main {
-    width: 75%;
-    min-width: 600px;
-    max-width: 1000px;
-    height: 600px;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 4px;
+body {
+    overflow-x: hidden;
+}
+main.row {
+    height: 1200px;
     background-image: url('images/earth_weather_img.gif');
     background-repeat: no-repeat;
-    background-position: center;
+    background-image: contain;
+    background-size: 90%;
+    background-position-x: center;
 }
 
-h1 {
+h1.quiz-title {
     text-align: center;
     color: #00bfff;
-    font-size: 4em;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    padding-top: 40px;
+    font-size: 6em;
+    margin-top: 20%;
+    margin-bottom: 10px;
 }
 
 .start-page, .question-page, .feedback-page, .results-page {
@@ -36,13 +34,13 @@ button {
 }
 
 .start-page p {
-    margin: 75px auto 30px auto;
+    margin: 10px auto;
     padding: 10px;
-    width: 90%;
+    width: 80%;
     max-width: 500px;
     background-color: rgba(21,16,13,0.85);
     color: #ffffff;
-    font-size: 1.25em;
+    font-size: 2em;
     border-radius: 4px;
 }
 
@@ -53,15 +51,16 @@ button {
     border: 2px solid white;
     border-radius: 4px;
     background-color: #00bfff;
+    margin-top: 15px;
 }
 
 .question-page, .feedback-page {
     background-color: rgba(21,16,13,0.85);
     color: white;
-    width: 500px;
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: -30px;
+    /* margin-top: -30px; */
     padding: 20px;
     border-radius: 4px;
 }
@@ -73,7 +72,6 @@ button {
 .answer-submit, .next-submit, .restart-quiz-submit {
     font-size: 1em;
     width: 100px;
-    margin-top: 15px;
     padding: 5px;
     border: 2px solid white;
     border-radius: 4px;
@@ -83,9 +81,7 @@ button {
 
 fieldset {
     text-align: left;
-    width: 60%;
-    max-width: 500px;
-    min-width: 300px;
+    width: 95%;
     margin: 20px auto;
     padding: 10px;
 }
@@ -93,7 +89,8 @@ fieldset {
 .current-question-text {
     width: 75%;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 10px auto;
+    font-size: 100%;
 }
 
 .answer-input {
@@ -102,48 +99,108 @@ fieldset {
 
 .answer-feedback-image, #results-page-img {
     display: block;
+    width: 90%;
     margin: 20px auto;
 }
-
 
 
 .current-score, .final-quiz-score {
     color: white;
     font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .results-page {
-     /* background-image: url('images/weather_img.jpg'); 
-    background-size: 100%;
-    background-repeat: no-repeat; */
     background-color: rgba(21,16,13,0.8);
     border-radius: 4px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 30px;
-    width: 400px;
-    height: 300px;
+    padding: 10px;
+    width: 60%;
 }
 
 .final-score-h2 {
-    margin-top: 45px;
+    margin-top: 10px;
 }
 
 .final-score-h2, .final-quiz-score {
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 [alt~="anemometer"] {
-    height: 100%;
-}
-
-.results-page {
-    margin-top: -20px;
+    height: 300px;
 }
 
 .restart-quiz-submit {
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 150px;
     font-size: 1.15em;
 }
+
+
+
+
+/**** media queries ****/
+
+@media only screen and (max-width: 740px) {
+    main.row {
+      height: 750px;
+      background-position-y: 50px;
+    }
+
+    h1.quiz-title {
+        font-size: 3.5em;
+    }
+
+    .start-page p {
+        font-size: 1.25em;
+        width: 90%;
+    }
+
+    #start-button {
+        font-size: 1em;
+    }
+
+  }
+
+@media only screen and (min-width: 741px) and (max-width: 768px) {
+    main.row {
+      height: 800px;
+      background-position-y: 50px;
+    }
+
+    h1.quiz-title {
+        font-size: 4.5em;
+    }
+
+    .question-page, .feedback-page {
+        width: 60%;
+      }
+
+      fieldset {
+          width: 50%;
+      }
+
+  }
+
+  @media only screen and (min-width: 769px) {
+      main.row {
+          margin-top: 20%;
+      }
+
+      .question-page, .feedback-page {
+        width: 60%;
+      }
+
+      fieldset {
+          width: 50%;
+      }
+
+      .final-score-h2, .final-quiz-score {
+        font-size: 2em;
+    }
+
+  }
+
