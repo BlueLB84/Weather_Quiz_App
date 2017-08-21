@@ -10,7 +10,7 @@
     <title>Weather Quiz App</title>
 </head>
 <body>
-    <main role="main-content" class="row">
+    <main role="main" class="row">
     
     <h1 class="quiz-title">WxQz</h1>
         <section  class="js-start-page start-page">
@@ -22,13 +22,15 @@
             <h2>Question <span class="js-current-question-index"></span> of 10</h2>    
             <form name="current-question-form" id="current-question">
                 <p class="js-current-question current-question-text"></p>
-                <fieldset name="answer-choices" class="js-answer-choices"></fieldset>
+                <fieldset name="answer-choices" class="js-answer-choices">
+                    <legend>Answer Choices:</legend>
+                </fieldset>
                 <button type="submit" class="js-answer-submit answer-submit">Submit</button>
             </form>
         </section>
 
         <section class="js-feedback-page feedback-page">
-            <h2 class="js-answer-feedback answer-feedback"></h2>
+            <h2 class="js-answer-feedback answer-feedback" role="presentation"></h2>
                 <img src="" alt="" class="answer-feedback-image">
                 <h3 class="js-current-question-restated"></h3>
                 <p class="js-current-correct-answer"></p>

@@ -20,6 +20,9 @@ main.row {
 h1.quiz-title {
     text-align: center;
     color: #00bfff;
+    background-color: rgba(21,16,13,0.85);
+    width: 60%;
+    max-width: 500px;
     font-size: 6em;
     margin-top: 20%;
     margin-bottom: 10px;
