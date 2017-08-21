@@ -10,7 +10,7 @@ The purpose of this project was to gain experience working with jQuery and creat
 *  Front-end technologies
     +  HTML, CSS, JavaScript, jQuery, A11y 
 *  Development Environment
-    +  Postman, Visual Studio Code, Browswer sync, Chrome Developer Tools, aXe Chrome extension
+    +  Visual Studio Code, Browswer sync, Chrome Developer Tools, aXe Chrome extension
 
 
 
