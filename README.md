@@ -12,5 +12,10 @@ The purpose of this project was to gain experience working with jQuery and creat
 *  Development Environment
     +  Visual Studio Code, Browswer sync, Chrome Developer Tools, aXe Chrome extension
 
+![WxQz Start Page](/images/WxQz_start.png "WxQz Start Page")
+![WxQz Question Page](/images/WxQx_question.png "WxQz Question Page")
+![WxQz Feedback Page](/images/WxQx_feedback.png "WxQz Feedback Page")
+
+
 
 
