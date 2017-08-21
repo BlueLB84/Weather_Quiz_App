@@ -14,7 +14,7 @@ The purpose of this project was to gain experience working with jQuery and creat
 
 ![WxQz Start Page](/images/WxQz_start.png "WxQz Start Page")
 ![WxQz Question Page](/images/WxQx_question.png "WxQz Question Page")
-![WxQz Feedback Page](/images/WxQx_feedback.png "WxQz Feedback Page")
+![WxQz Feedback Page](/images/WxQz_feedback.png "WxQz Feedback Page")
 
 
 
