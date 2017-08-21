@@ -133,7 +133,7 @@ function renderQuestionPage (state, element) {
     });
     $('.js-current-question-index').text(`${state.currentQuestion + 1}`);
     $('.js-current-question').text(`${currentQuestion.question}`);
-    $('.js-answer-choices').append(choices);
+    $('.js-answer-choices').html(choices);
     $('.js-answer-choices input:first-child').attr('checked', true);
     document.getElementById("choice-0").focus();
 }

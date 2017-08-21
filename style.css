@@ -21,8 +21,6 @@ h1.quiz-title {
     text-align: center;
     color: #00bfff;
     background-color: rgba(21,16,13,0.85);
-    width: 60%;
-    max-width: 500px;
     border-radius: 4px;
     font-size: 6em;
     margin: 20% auto 10px auto;
@@ -60,17 +58,15 @@ button {
 .question-page, .feedback-page {
     background-color: rgba(21,16,13,0.85);
     color: white;
-    width: 80%;
     margin-right: auto;
     margin-left: auto;
-    /* margin-top: -30px; */
-    padding: 20px;
+    padding: 10px;
     border-radius: 4px;
 }
 
-.question-page p {
+/* .question-page p {
     width: 100%;
-}
+} */
 
 .answer-submit, .next-submit, .restart-quiz-submit {
     font-size: 1em;
@@ -118,7 +114,7 @@ fieldset {
     border-radius: 4px;
     margin-right: auto;
     margin-left: auto;
-    padding: 10px;
+    padding: 10px 15px;
     width: 60%;
 }
 
@@ -129,10 +125,6 @@ fieldset {
 .final-score-h2, .final-quiz-score {
     color: white;
     font-size: 1.5em;
-}
-
-[alt~="anemometer"] {
-    height: 300px;
 }
 
 .restart-quiz-submit {
@@ -155,11 +147,16 @@ fieldset {
 
     h1.quiz-title {
         font-size: 3.5em;
+        width: 80%;
     }
 
     .start-page p {
         font-size: 1.25em;
         width: 90%;
+    }
+
+    .question-page, .feedback-page {
+        width: 100%;
     }
 
     #start-button {
@@ -175,15 +172,20 @@ fieldset {
     }
 
     h1.quiz-title {
-        font-size: 4.5em;
+        font-size: 3em;
+        width: 60%;
     }
 
     .question-page, .feedback-page {
-        width: 60%;
+        width: 80%;
+        font-size: .8em;
       }
 
+    .current-question-text {
+        width: 100%;
+    }
       fieldset {
-          width: 50%;
+          width: 80%;
       }
 
   }
@@ -193,8 +195,12 @@ fieldset {
           margin-top: 20%;
       }
 
-      .question-page, .feedback-page {
+      h1.quiz-title  {
         width: 60%;
+        max-width: 500px;
+      }
+      .question-page, .feedback-page {
+        width: 70%;
       }
 
       fieldset {
