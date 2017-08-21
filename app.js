@@ -126,7 +126,7 @@ function renderQuestionPage (state, element) {
     let choices = currentQuestion.answers.map(function(answer, index) {
         return (
             `
-            <input type="radio" name="weather-answer" value="${index}" id="choice-${index}" required/><label for="choice-${index}" class="answer-input"> ${answer}</label>
+            <input type="radio" name="weather-answer" value="${index}" id="choice-${index}" aria-labelledby="choice-${index}" required/><label for="choice-${index}" class="answer-input"> ${answer}</label>
             <br>
             `
         );
@@ -134,6 +134,7 @@ function renderQuestionPage (state, element) {
     $('.js-current-question-index').text(`${state.currentQuestion + 1}`);
     $('.js-current-question').text(`${currentQuestion.question}`);
     $('.js-answer-choices').html(choices);
+    $('.js-answer-choices').append(`<legend>Answer Choices:</legend>`);
     $('.js-answer-choices input:first-child').attr('checked', true);
     document.getElementById("choice-0").focus();
 }

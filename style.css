@@ -23,9 +23,9 @@ h1.quiz-title {
     background-color: rgba(21,16,13,0.85);
     width: 60%;
     max-width: 500px;
+    border-radius: 4px;
     font-size: 6em;
-    margin-top: 20%;
-    margin-bottom: 10px;
+    margin: 20% auto 10px auto;
 }
 
 .start-page, .question-page, .feedback-page, .results-page {
